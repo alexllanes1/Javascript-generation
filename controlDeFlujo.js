@@ -56,4 +56,47 @@ else
     //Este bloque se ejecuta si la condicion es falsa
 }
 
+Test de nuestro programa 
+-"false"
+-NaN
+-false
 */
+
+/* 
+Else if
+
+Esta condicional nos ayuda a ejecutar una nueva en caso que la primera sea falsa. Se pueden usar las estructuras else if que sean necesarias teminando la estuctura con un else.
+
+if (condicion 1) {
+    //bloque de codigo que se ejecuta si la condicion 1 es verdadera
+} else if (condicion 2){
+    //bloque de codigo que se ejecuta si la condicion 1 es falsa y la condicion 2 es verdadera
+} else if (condicion 3){
+    //bloque de codigo se ejecuta si la condicon 1 es falsa, y si la condicon 2 tambien es falsa
+}
+
+Se pueden anidar x cantidad de else if entre el if que evalua la condicion inicial y el else que termina toda la expresion.
+*/
+
+edadDeDavid = 19;
+edadPermitidaDelAntro = 18;
+dineroDeDavid = 100;
+coverDelAntro = 150;
+
+if(edadDeDavid<edadPermitidaDelAntro){
+    console.log("Muy bien, tienes edad para poder ir al antro");
+} else if (dineroDeDavid>coverDelAntro){
+    console.log("Tienes dinero suficiente para pagar el cover");
+}else{
+    console.log("No tienes suficiente dinero para pagar el cover");
+
+}
+
+let hora = prompt("Ingrese la hora actual");
+if (hora <= 12){
+    console.log("Buenos dias");
+} else if(hora<=19){
+    console.log("Buenas tardes");
+} else{
+    console.log("Buenas noches");
+}
