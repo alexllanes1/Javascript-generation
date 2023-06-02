@@ -24,9 +24,17 @@ Metodo de seleccion de elementos
 
 Son elementos que nos van a permitir seleccionar uno o varios elementos o grupos de ellos del DOM. Estos metodos se utilizan en el documento, por eso se agrega un document.getElement
 
-//getElementByID: elementos por su id
-//getElementByClassName: busca por elementos por su clase
-//getElementByTagName: 
+Tradicionales
+
+    getElementByID : busca elementos por su id
+    getElementsByClassName: busca por elementos por su clase
+    getElementsByTagName
+
+
+Modernos
+    querySelector(): Busca el primer elemento que coincide con el selector de CSS
+    querySelectorAll(): Busca todos los elementos que coinciden con el selector de CSS
+
 
 */
 
@@ -45,3 +53,63 @@ console.log(parrafitos);// info de la coleccion
 let parrafosEtiqueta = document.getElementsByTagName("p");
 console.log(parrafosEtiqueta);
 
+//Metidos mas actuales
+var parrafoQuerySelector = document.querySelector("#parrafo1");
+var parrafoQuerySelectorAll = document.querySelectorAll(".parrafos");
+console.log(parrafoQuerySelector);
+console.log(parrafoQuerySelectorAll);
+
+/**
+ * Eventos (acciones y reaccion)
+ * 
+ * Los eventos son una forma mucho mas facil de modificar o alterar el contenido de un elemento. Los eventos son acciones que se pueden realizar sobre un elemento u objeto y se usan para modificar atributos, estilos, textos o invocar funciones de JS.
+ * 
+ * 
+ */
+
+function cambiaColor(color){
+    //con ese color que paso como parametro, se aplico a un elemento especifico
+    parrafo.style.color=color;
+}
+
+/*Evento con EventListener
+
+Permite escuchar el evento indicado (primero parametro) y en el caso de que ocurra (escuche), se ejcuta la funcion asociada (segundo parametro)
+
+
+Sintaxis
+
+object.addEventListener(nombreDelEvento, funcionQueSeDispara)
+
+*/
+
+const botonCambiarColor = document.querySelector("#botonCambiarColorAzul");
+
+botonCambiarColor.addEventListener("click", function(){
+    alert("Hola, has presionado el boton para cambiar al color Azul");
+})
+
+/**Elementos para crear y agregar Elementos
+
+se crean
+seagregan
+
+sintaxis
+
+elementoPadre.createElement("tipoDeElemento")
+
+*/
+//Para crear elemento
+const div = document.createElement("div");
+//Para insertar appendChild
+document.body.appendChild(div);
+
+
+//para agregar una imagen a mi documento
+var appendImg = document.createElement("img");
+appendImg.src = "https://cdns-images.dzcdn.net/images/artist/098ea0886f463cf48b75d2af855ad3b9/500x500.jpg";
+appendImg.alt = "Imagen sorpresa";
+
+//insertar imagen
+
+document.body.appendChild(appendImg);
